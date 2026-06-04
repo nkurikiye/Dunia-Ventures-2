@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dunia Ventures — Africa's creative economy, engineered to scale</title>
+<meta name="description" content="Dunia Ventures is an early-stage fund turning African creativity — film, music, fashion, gaming and digital arts — into global, scalable companies." />
+<link rel="stylesheet" href="dunia.css" />
+<script>document.documentElement.className+=' js';try{var t=localStorage.getItem('dunia.theme');var P={plum:['#6C3FB6','#F4EEFF','#1C0E36'],vermillion:['#E8431F','#FCF3EC','#2A0C05'],marigold:['#E59000','#1B1304','#33240A'],jade:['#0F8A5E','#EAFBF1','#062418']};if(t&&P[t]){var s=document.documentElement.style;s.setProperty('--accent',P[t][0]);s.setProperty('--on-accent',P[t][1]);s.setProperty('--accent-deep',P[t][2]);}var f=localStorage.getItem('dunia.font');var F={'Syne':"'Syne','Hanken Grotesk',sans-serif",'Archivo':"'Archivo','Hanken Grotesk',sans-serif",'Bricolage Grotesque':"'Bricolage Grotesque','Hanken Grotesk',sans-serif"};if(f&&F[f])document.documentElement.style.setProperty('--font-display',F[f]);if(localStorage.getItem('dunia.grain')==='0')document.documentElement.setAttribute('data-nograin','1');}catch(e){}</script>
+<style>
+/* ---- page-specific ---- */
+.hero{ padding-top:clamp(28px,4vw,56px); padding-bottom:clamp(28px,4vw,52px); }
+.hero__grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(28px,4.5vw,68px); align-items:center; }
+.hero h1{ margin:.14em 0 0; }
+.hero__lead{ margin:26px 0 30px; max-width:46ch; }
+.hero__ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+.hero__art{ position:relative; margin:0; aspect-ratio:4/5; background:var(--ink); border-radius:var(--radius); overflow:hidden; }
+.hero__art img{ width:100%; height:100%; object-fit:cover; object-position:50% 16%; display:block; }
+.hero__art-badge{ position:absolute; left:14px; bottom:14px; background:var(--ink); color:var(--paper); font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; padding:9px 13px; border-radius:999px; z-index:3; }
+@media (max-width:860px){ .hero__grid{ grid-template-columns:1fr; } .hero__art{ max-height:78vh; aspect-ratio:4/5; order:2; } }
+
+.meta-row{ display:flex; flex-wrap:wrap; gap:0; border-top:1.5px solid var(--ink); margin-top:clamp(40px,5vw,64px); }
+.meta-row .cell{ flex:1 1 180px; padding:22px 24px 22px 0; border-right:1px solid var(--line); }
+.meta-row .cell:last-child{ border-right:0; }
+.meta-row .k{ font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); display:block; margin-bottom:8px; }
+.meta-row .v{ font-family:var(--font-display); font-weight:600; font-size:1.15rem; letter-spacing:-0.02em; }
+@media (max-width:680px){ .meta-row .cell{ flex-basis:46%; border-right:0; } }
+
+/* proof */
+.proof__grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(18px,2vw,28px); margin-top:clamp(40px,5vw,64px); }
+@media (max-width:960px){ .proof__grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:520px){ .proof__grid{ grid-template-columns:1fr; } }
+.pcard2{ display:flex; flex-direction:column; }
+.pcard2__img{ position:relative; aspect-ratio:4/5; border-radius:var(--radius); overflow:hidden; background:var(--ink); }
+.pcard2__img img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .65s cubic-bezier(.2,.7,.2,1); }
+.pcard2:hover .pcard2__img img{ transform:scale(1.045); }
+.pcard2__img .ph{ position:absolute; inset:0; }
+.pcard2__sector{ position:absolute; top:12px; left:12px; z-index:2; background:var(--accent); color:var(--on-accent); font-family:var(--font-mono); font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:6px 11px; border-radius:999px; }
+.pcard2__name{ font-family:var(--font-display); font-weight:700; font-size:1.6rem; letter-spacing:-0.02em; margin:16px 0 0; }
+.pcard2__fact{ margin:8px 0 0; color:var(--ink-soft); font-size:.9rem; line-height:1.45; }
+.pcard2__quote{ margin:14px 0 0; font-family:var(--font-serif); font-style:italic; font-size:1.12rem; line-height:1.3; color:var(--ink); padding-top:14px; border-top:1px solid var(--line); }
+.proof__statement{ margin-top:clamp(56px,7vw,104px); text-align:center; }
+.proof__statement .big{ font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.6vw,3.5rem); letter-spacing:-0.03em; line-height:1.02; max-width:20ch; margin:0 auto; text-wrap:balance; }
+.proof__statement .big em{ font-family:var(--font-serif); font-style:italic; font-weight:400; color:var(--accent); }
+.proof__statement p{ max-width:54ch; margin:24px auto 0; color:var(--ink-2); font-size:1.14rem; line-height:1.55; }
+.proof__statement .btn{ margin-top:34px; }
+
+.thesis__grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(28px,5vw,80px); align-items:start; }
+@media (max-width:860px){ .thesis__grid{ grid-template-columns:1fr; } }
+
+.pillars{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:clamp(48px,6vw,88px); border-top:1.5px solid var(--ink); }
+.pillar{ padding:30px 26px 36px 0; border-right:1px solid var(--line); }
+.pillar:last-child{ border-right:0; padding-right:0; }
+.pillar .num{ font-family:var(--font-mono); font-size:12px; color:var(--accent); letter-spacing:.1em; }
+.pillar h3{ font-family:var(--font-display); font-weight:600; font-size:1.4rem; letter-spacing:-0.02em; line-height:1.05; margin:18px 0 12px; }
+.pillar p{ margin:0; color:var(--ink-2); font-size:.98rem; line-height:1.5; }
+@media (max-width:860px){ .pillars{ grid-template-columns:repeat(2,1fr); } .pillar:nth-child(2){ border-right:0; } .pillar{ padding-right:24px; } }
+@media (max-width:520px){ .pillars{ grid-template-columns:1fr; } .pillar{ border-right:0; border-bottom:1px solid rgba(243,236,221,.18); } }
+
+.metrics{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(28px,4vw,56px); margin-top:clamp(40px,5vw,72px); }
+.metric .big{ font-family:var(--font-display); font-weight:700; font-size:clamp(3rem,7vw,5.6rem); letter-spacing:-0.04em; line-height:.9; color:var(--accent); }
+.metric .lbl{ margin-top:14px; font-size:1.02rem; color:rgba(243,236,221,.8); max-width:30ch; }
+@media (max-width:760px){ .metrics{ grid-template-columns:1fr; gap:36px; } }
+
+.port__head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:clamp(36px,4vw,56px); }
+.port__grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(18px,2vw,28px); }
+@media (max-width:980px){ .port__grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:520px){ .port__grid{ grid-template-columns:1fr; } }
+.pcard{ display:flex; flex-direction:column; }
+.pcard .cover{ aspect-ratio:4/5; }
+.pcard .cover .ph{ width:100%; height:100%; }
+.pcard__body{ padding:18px 0 0; }
+.pcard__top{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
+.pcard h3{ font-family:var(--font-display); font-weight:700; font-size:1.5rem; letter-spacing:-0.02em; margin:0; }
+.pcard .stage{ font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
+.pcard .sector{ font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin:8px 0 6px; }
+.pcard p{ margin:0; color:var(--ink-2); font-size:.96rem; }
+.pcard:hover .ph::after{ opacity:.75; }
+
+.team-strip{ display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(28px,5vw,72px); align-items:center; }
+.team-faces{ display:flex; }
+.team-faces .face{ width:84px; height:84px; border-radius:50%; margin-left:-18px; border:3px solid var(--paper); background:var(--accent); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700; color:var(--on-accent); font-size:1.5rem; overflow:hidden; position:relative; }
+.team-faces .face:first-child{ margin-left:0; }
+.team-faces .face:nth-child(2){ background:var(--ink); color:var(--paper); }
+.team-faces .face:nth-child(3){ background:color-mix(in srgb,var(--accent) 55%, var(--ink)); }
+.team-faces .face:nth-child(4){ background:var(--ink-2); color:var(--paper); }
+.team-faces .face img{ width:100%; height:100%; object-fit:cover; }
+@media (max-width:760px){ .team-strip{ grid-template-columns:1fr; } }
+
+.news{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,5vw,64px); align-items:center; }
+.news form{ display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+.news input[type=email]{ flex:1 1 240px; background:transparent; border:0; border-bottom:1.5px solid var(--on-accent); color:var(--on-accent); font-family:var(--font-body); font-size:1.1rem; padding:12px 4px; outline:none; }
+.news input[type=email]::placeholder{ color:var(--on-accent); opacity:.6; }
+.news .btn{ background:var(--ink); border-color:var(--ink); color:var(--paper); }
+.news .btn:hover{ background:var(--paper); color:var(--ink); border-color:var(--paper); }
+.news [data-done]{ font-family:var(--font-mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase; margin-top:14px; min-height:1em; }
+@media (max-width:760px){ .news{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body data-nograin-init>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html" aria-label="Dunia Ventures home"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="14.5" cy="25.5" r="12.5" fill="#2E2150"/><circle cx="25.5" cy="25.5" r="12.5" fill="#191024"/><circle cx="20" cy="14.5" r="12.5" fill="#6C45B8" fill-opacity="0.92"/></svg>Dunia</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nl" href="index.html" aria-current="page">Home</a>
+      <a class="nl" href="Portfolio.html">Themes</a>
+      <a class="nl" href="Approach.html">Approach</a>
+      <a class="nl" href="Team.html">Team</a>
+      <a class="nl" href="About.html">About</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn" href="mailto:info@wajenzi.fund">Get in touch</a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero wrap" data-screen-label="Home / Hero">
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <span class="eyebrow reveal">Early-stage creative-tech <span class="idx">· Africa</span></span>
+      <h1 class="display d-hero reveal d1">Africa's <em>creative</em> economy, engineered to scale.</h1>
+      <p class="lead hero__lead reveal d2">We back creative businesses <em>using</em> technology — not technology businesses touching creative sectors. Early-stage capital and hands-on support across film, music, fashion-tech, gaming and creative-tech.</p>
+      <div class="hero__ctas reveal d3">
+        <a class="btn btn--accent" href="Portfolio.html">Explore the themes</a>
+        <a class="btn btn--ghost" href="Approach.html">Our thesis</a>
+      </div>
+    </div>
+    <figure class="hero__art reveal d2">
+      <img src="assets/actor.png" alt="A performer dancing outside a jazz bar — a nod to Africa's creative culture" />
+      <figcaption class="hero__art-badge">Creative-tech · Africa</figcaption>
+    </figure>
+  </div>
+
+  <div class="meta-row reveal">
+    <div class="cell"><span class="k">Footprint</span><span class="v">Côte d'Ivoire · Algeria · Luxembourg</span></div>
+    <div class="cell"><span class="k">Stage</span><span class="v">Seed → Series A</span></div>
+    <div class="cell"><span class="k">Cheque</span><span class="v">€300K – €1.5M</span></div>
+    <div class="cell"><span class="k">Focus</span><span class="v">Creative × technology</span></div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__item">Film &amp; Audiovisual <span class="star">✦</span></span>
+    <span class="marquee__item">Music <span class="star">✦</span></span>
+    <span class="marquee__item">Fashion-Tech <span class="star">✦</span></span>
+    <span class="marquee__item">Gaming <span class="star">✦</span></span>
+    <span class="marquee__item">Digital Arts <span class="star">✦</span></span>
+    <span class="marquee__item">Creative-Tech <span class="star">✦</span></span>
+  </div>
+</div>
+
+<!-- ============ PROOF ============ -->
+<section class="section wrap" data-screen-label="Home / Proof">
+  <div class="proof__head reveal" style="max-width:30ch;">
+    <span class="eyebrow">Proof <span class="idx">(02)</span></span>
+    <h2 class="display d-1" style="margin-top:.3em;">Proven models. <em>Untapped</em> opportunity.</h2>
+    <p class="lead" style="margin-top:22px;">The question is no longer whether African creative businesses can create venture-scale outcomes. The question is how many more can be built.</p>
+  </div>
+
+  <div class="proof__grid">
+    <article class="pcard2 reveal">
+      <div class="pcard2__img"><span class="pcard2__sector">Music</span><img src="assets/mavin.png" alt="Mavin Records artists" style="object-position:center 22%;" /></div>
+      <h3 class="pcard2__name">Mavin</h3>
+      <p class="pcard2__fact">Billions of streams. Strategic acquisition by Universal Music Group.</p>
+      <p class="pcard2__quote">“Mavin proved African music can create strategic exit value.”</p>
+    </article>
+
+    <article class="pcard2 reveal d1">
+      <div class="pcard2__img"><span class="pcard2__sector">Animation</span><img src="assets/kugali.png" alt="Kugali founders at the Disney·Kugali premiere" style="object-position:center top;" /></div>
+      <h3 class="pcard2__name">Kugali</h3>
+      <p class="pcard2__fact">Disney partnership and global distribution through Disney+.</p>
+      <p class="pcard2__quote">“Kugali proved African animation can compete on the world stage.”</p>
+    </article>
+
+    <article class="pcard2 reveal d2">
+      <div class="pcard2__img"><span class="pcard2__sector">Gaming</span><img src="assets/carry1st.png" alt="Carry1st founding team" style="object-position:center center;" /></div>
+      <h3 class="pcard2__name">Carry1st</h3>
+      <p class="pcard2__fact">Raised significant venture capital and built one of Africa's leading gaming platforms.</p>
+      <p class="pcard2__quote">“Carry1st proved African gaming is investable.”</p>
+    </article>
+
+    <article class="pcard2 reveal d3">
+      <div class="pcard2__img"><span class="pcard2__sector">Film &amp; Media</span><img src="assets/ebonylife.png" alt="EbonyLife Studios production camera and monitor" style="object-position:22% 38%;" /></div>
+      <h3 class="pcard2__name">EbonyLife</h3>
+      <p class="pcard2__fact">Built a globally recognised African media company with international partnerships.</p>
+      <p class="pcard2__quote">“EbonyLife proved African stories can become scalable media businesses.”</p>
+    </article>
+  </div>
+
+  <div class="proof__statement reveal">
+    <p class="big">These companies are not exceptions.<br />They are <em>signals</em>.</p>
+    <p>Dunia Ventures invests in the next generation of African creative-economy champions — before the rest of the market catches up.</p>
+    <a class="btn" href="Approach.html">Explore our investment thesis</a>
+  </div>
+</section>
+
+<!-- ============ THESIS ============ -->
+<section class="section wrap" data-screen-label="Home / Thesis">
+  <div class="thesis__grid">
+    <div class="reveal">
+      <span class="eyebrow">Thesis <span class="idx">(03)</span></span>
+      <h2 class="display d-1" style="margin-top:.3em;">We turn African <em>creativity</em> into scalable companies.</h2>
+    </div>
+    <div class="reveal d2">
+      <p class="lead" style="margin-bottom:26px;">The world's most exciting creative talent is African and young — but the capital and infrastructure to scale it globally barely exist. Dunia is built to close that gap, sector by sector.</p>
+      <p style="color:var(--ink-2); margin:0 0 28px;">We back founders who are turning culture into companies: studios, marketplaces, rights platforms and tools that make African creativity exportable, ownable and durable.</p>
+      <a class="arrow-link" href="Approach.html">Read the full thesis <span class="ar">→</span></a>
+    </div>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar reveal"><span class="num">A</span><h3>Hybrid capital</h3><p>Equity and revenue-based financing from seed to Series A, structured for the non-linear cashflows of creative businesses.</p></div>
+    <div class="pillar reveal d1"><span class="num">B</span><h3>IP-native underwriting</h3><p>Diligence built for catalogues, rights and royalties — value founders get to keep.</p></div>
+    <div class="pillar reveal d2"><span class="num">C</span><h3>Hands-on build</h3><p>Operators who help you package, distribute and monetise across markets.</p></div>
+    <div class="pillar reveal d3"><span class="num">D</span><h3>Global market access</h3><p>Routes to platforms, studios, brands and festivals worldwide.</p></div>
+  </div>
+</section>
+
+<!-- ============ IMPACT / OPPORTUNITY ============ -->
+<section class="section bg-ink" data-screen-label="Home / Opportunity">
+  <div class="wrap">
+    <div class="reveal" style="max-width:46ch;">
+      <span class="eyebrow">The opportunity <span class="idx">(04)</span></span>
+      <h2 class="display d-1" style="margin-top:.3em;">A continent of creators, undercapitalised.</h2>
+    </div>
+    <div class="metrics">
+      <div class="metric reveal"><div class="big">€20–25B</div><div class="lbl">Africa's creative &amp; cultural economy today — and equity reaches almost none of it.</div></div>
+      <div class="metric reveal d1"><div class="big">5</div><div class="lbl">Verticals: film, music, fashion-tech, gaming and creative-tech.</div></div>
+      <div class="metric reveal d2"><div class="big">7</div><div class="lbl">Priority markets across the continent, Francophone-weighted.</div></div>
+    </div>
+    <p class="mono-tag reveal" style="margin-top:40px; color:rgba(243,236,221,.45);">Sources · Afreximbank CCI Report · CANEX value-chain analysis</p>
+  </div>
+</section>
+
+<!-- ============ INVESTMENT THEMES ============ -->
+<section class="section bg-ink" data-screen-label="Home / Investment themes">
+  <div class="wrap">
+    <div class="reveal" style="max-width:44ch;">
+      <span class="eyebrow">Investment themes <span class="idx">(05)</span></span>
+      <h2 class="display d-1" style="margin-top:.3em;">Where Dunia invests.</h2>
+      <p class="lead" style="margin-top:20px;">We invest in businesses building, monetising and scaling African creative intellectual property across high-growth sectors.</p>
+    </div>
+
+    <div class="themes-grid">
+      <a class="theme-card reveal" href="Approach.html">
+        <div class="theme-viz"><svg viewBox="0 0 220 110" fill="none" stroke="currentColor" stroke-width="2"><rect x="34" y="26" width="152" height="58" rx="8"/><line x1="34" y1="45" x2="186" y2="45"/><line x1="34" y1="65" x2="186" y2="65"/><polygon points="102,46 102,64 119,55" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Film &amp; TV</h3>
+        <span class="sub">Production Financing &amp; IP Ownership</span>
+        <p>Backing studios, production companies and content platforms creating globally exportable African stories.</p>
+        <span class="go">Investment thesis <span class="ar">→</span></span>
+      </a>
+
+      <a class="theme-card reveal d1" href="Approach.html">
+        <div class="theme-viz"><svg viewBox="0 0 220 110" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><line x1="40" y1="45" x2="40" y2="65"/><line x1="54" y1="34" x2="54" y2="76"/><line x1="68" y1="40" x2="68" y2="70"/><line x1="82" y1="27" x2="82" y2="83"/><line x1="96" y1="42" x2="96" y2="68"/><line x1="110" y1="22" x2="110" y2="88"/><line x1="124" y1="40" x2="124" y2="70"/><line x1="138" y1="30" x2="138" y2="80"/><line x1="152" y1="44" x2="152" y2="66"/><line x1="166" y1="34" x2="166" y2="76"/><line x1="180" y1="46" x2="180" y2="64"/></svg></div>
+        <h3>Music</h3>
+        <span class="sub">Rights, Royalties &amp; Artist Infrastructure</span>
+        <p>Investing in businesses powering artist monetisation, licensing, royalty management and music distribution.</p>
+        <span class="go">Investment thesis <span class="ar">→</span></span>
+      </a>
+
+      <a class="theme-card reveal d2" href="Approach.html">
+        <div class="theme-viz"><svg viewBox="0 0 220 110" fill="none" stroke="currentColor" stroke-width="2"><rect x="30" y="35" width="46" height="40" rx="6"/><rect x="87" y="35" width="46" height="40" rx="6"/><rect x="144" y="35" width="46" height="40" rx="6"/><line x1="76" y1="55" x2="87" y2="55"/><line x1="133" y1="55" x2="144" y2="55"/><polygon points="46,46 46,64 61,55" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Animation</h3>
+        <span class="sub">African IP &amp; Character Universes</span>
+        <p>Supporting studios creating globally scalable animation franchises rooted in African culture.</p>
+        <span class="go">Investment thesis <span class="ar">→</span></span>
+      </a>
+
+      <a class="theme-card reveal" href="Approach.html">
+        <div class="theme-viz"><svg viewBox="0 0 220 110" fill="none" stroke="currentColor" stroke-width="2"><rect x="44" y="34" width="132" height="52" rx="26"/><line x1="70" y1="60" x2="88" y2="60"/><line x1="79" y1="51" x2="79" y2="69"/><circle cx="140" cy="54" r="5" fill="currentColor" stroke="none"/><circle cx="154" cy="68" r="5"/></svg></div>
+        <h3>Gaming</h3>
+        <span class="sub">Interactive Entertainment</span>
+        <p>Backing game studios and platforms building African-first gaming experiences.</p>
+        <span class="go">Investment thesis <span class="ar">→</span></span>
+      </a>
+
+      <a class="theme-card reveal d1" href="Approach.html">
+        <div class="theme-viz"><svg viewBox="0 0 220 110" fill="none" stroke="currentColor" stroke-width="2"><path d="M44 26 C74 60, 92 60, 112 90"/><path d="M76 26 C106 60, 124 60, 144 90"/><path d="M108 26 C138 60, 156 60, 176 90"/><path d="M140 26 C170 60, 188 60, 200 84"/></svg></div>
+        <h3>Fashion</h3>
+        <span class="sub">Creative Brands &amp; Commerce</span>
+        <p>Supporting premium African brands with international growth potential.</p>
+        <span class="go">Investment thesis <span class="ar">→</span></span>
+      </a>
+
+      <a class="theme-card reveal d2" href="Approach.html">
+        <div class="theme-viz"><svg viewBox="0 0 220 110" fill="none" stroke="currentColor" stroke-width="2"><line x1="62" y1="30" x2="110" y2="60"/><line x1="150" y1="28" x2="110" y2="60"/><line x1="40" y1="80" x2="110" y2="60"/><line x1="180" y1="78" x2="110" y2="60"/><line x1="62" y1="30" x2="150" y2="28"/><circle cx="62" cy="30" r="5"/><circle cx="150" cy="28" r="5"/><circle cx="40" cy="80" r="5"/><circle cx="180" cy="78" r="5"/><circle cx="110" cy="60" r="7.5" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Creative-Tech</h3>
+        <span class="sub">Creator Infrastructure</span>
+        <p>Investing in the tools that help creators produce, distribute and monetise content.</p>
+        <span class="go">Investment thesis <span class="ar">→</span></span>
+      </a>
+    </div>
+
+    <div class="themes-statement reveal">
+      <p>From intellectual property to global audiences, we invest across the value chain of Africa's creative economy.</p>
+      <a class="btn" href="Approach.html">Explore our investment thesis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM STRIP ============ -->
+<section class="section--tight wrap" data-screen-label="Home / Team">
+  <hr class="rule" style="margin-bottom:clamp(40px,5vw,64px);" />
+  <div class="team-strip">
+    <div class="reveal">
+      <span class="eyebrow">The team <span class="idx">(06)</span></span>
+      <h2 class="display d-2" style="margin-top:.3em;">Operators, investors and creatives — in one room.</h2>
+    </div>
+    <div class="reveal d1">
+      <div class="team-faces">
+        <span class="face"><img src="assets/alain.png" alt="Alain Nkurikiye" /></span>
+        <span class="face"><img src="assets/francoise.png" alt="Françoise Ellong" /></span>
+        <span class="face"><img src="assets/francis.png" alt="Francis Y. Brown" /></span>
+        <span class="face"><img src="assets/olufunbi.png" alt="Olufunbi Falayi" /></span>
+      </div>
+      <p style="color:var(--ink-2); margin:22px 0 22px; max-width:44ch;">Led by founders and operators who have built studios, produced award-winning film, scaled platforms and deployed capital across Africa and Europe.</p>
+      <a class="arrow-link" href="Team.html">Meet the team <span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="section bg-accent" id="dispatch" data-screen-label="Home / Dispatch">
+  <div class="wrap news">
+    <div class="reveal">
+      <span class="eyebrow">The Dunia Dispatch <span class="idx">(07)</span></span>
+      <h2 class="display d-1" style="margin-top:.25em;">Field notes on Africa's creative economy.</h2>
+    </div>
+    <div class="reveal d1">
+      <p class="lead">Monthly intelligence on the founders, deals and shifts shaping creative-tech across the continent.</p>
+      <form data-newsletter>
+        <input type="email" placeholder="you@studio.com" aria-label="Email address" required />
+        <button class="btn" type="submit">Subscribe</button>
+        <div data-done aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <svg class="brand-mark" style="width:40px;height:40px;margin-bottom:16px;" viewBox="0 0 40 40" aria-hidden="true"><circle cx="14.5" cy="25.5" r="12.5" fill="#4B3578"/><circle cx="25.5" cy="25.5" r="12.5" fill="#2E2150"/><circle cx="20" cy="14.5" r="12.5" fill="#8A63D6" fill-opacity="0.95"/></svg>
+        <span class="eyebrow">Dunia Ventures</span>
+        <p class="footer__big">Let's build<br />what's next.</p>
+        <p class="mono-tag" style="color:rgba(243,236,221,.5); margin:14px 0 0; letter-spacing:.08em;">Investing in imagination · Scaling creativity</p>
+        <a class="btn" href="mailto:info@wajenzi.fund" style="margin-top:24px; background:var(--paper); color:var(--ink); border-color:var(--paper);">info@wajenzi.fund</a>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="Portfolio.html">Investment themes</a>
+        <a href="Approach.html">Our approach</a>
+        <a href="Team.html">Team</a>
+        <a href="About.html">About</a>
+      </div>
+      <div class="footer__col">
+        <h4>Connect</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">X / Twitter</a>
+        <a href="mailto:info@wajenzi.fund">Pitch us</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Dunia Ventures</span>
+      <span>Côte d'Ivoire · Algeria · Luxembourg</span>
+    </div>
+  </div>
+</footer>
+
+<script src="dunia.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="dunia-tweaks.jsx"></script>
+</body>
+</html>

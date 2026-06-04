@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About &amp; Thesis — Dunia Ventures</title>
+<meta name="description" content="Dunia Ventures is a sector-specialist fund capitalising African creativity — our thesis, our model and our team." />
+<link rel="stylesheet" href="dunia.css" />
+<script>document.documentElement.className+=' js';try{var t=localStorage.getItem('dunia.theme');var P={plum:['#6C3FB6','#F4EEFF','#1C0E36'],vermillion:['#E8431F','#FCF3EC','#2A0C05'],marigold:['#E59000','#1B1304','#33240A'],jade:['#0F8A5E','#EAFBF1','#062418']};if(t&&P[t]){var s=document.documentElement.style;s.setProperty('--accent',P[t][0]);s.setProperty('--on-accent',P[t][1]);s.setProperty('--accent-deep',P[t][2]);}var f=localStorage.getItem('dunia.font');var F={'Syne':"'Syne','Hanken Grotesk',sans-serif",'Archivo':"'Archivo','Hanken Grotesk',sans-serif",'Bricolage Grotesque':"'Bricolage Grotesque','Hanken Grotesk',sans-serif"};if(f&&F[f])document.documentElement.style.setProperty('--font-display',F[f]);}catch(e){}</script>
+<style>
+.ab-hero{ padding-top:clamp(44px,6vw,88px); padding-bottom:clamp(36px,4vw,56px); }
+.ab-hero h1{ margin:.16em 0 0; max-width:16ch; }
+.ab-hero .lead{ margin-top:30px; }
+
+.story{ display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(28px,5vw,90px); align-items:start; }
+.story p{ font-size:1.15rem; line-height:1.6; color:var(--ink-2); margin:0 0 24px; }
+.story p:last-child{ margin-bottom:0; }
+.story .pull{ font-family:var(--font-display); font-weight:600; font-size:clamp(1.5rem,2.6vw,2.1rem); line-height:1.15; letter-spacing:-0.02em; color:var(--ink); }
+.story .pull em{ font-family:var(--font-serif); font-style:italic; font-weight:400; }
+@media (max-width:820px){ .story{ grid-template-columns:1fr; gap:28px; } }
+
+/* model list */
+.model__row{ display:grid; grid-template-columns:80px 1fr 1.1fr; gap:clamp(20px,3vw,48px); align-items:start;
+  padding:clamp(28px,3.4vw,44px) 0; border-top:1px solid rgba(243,236,221,.18); }
+.model__row:last-child{ border-bottom:1px solid rgba(243,236,221,.18); }
+.model__num{ font-family:var(--font-mono); font-size:13px; font-weight:700; letter-spacing:.1em; color:var(--accent); padding-top:8px; }
+.model__row h3{ font-family:var(--font-display); font-weight:600; font-size:clamp(1.6rem,3vw,2.3rem); letter-spacing:-0.025em; line-height:1.02; margin:0; }
+.model__row p{ margin:0; color:rgba(243,236,221,.78); font-size:1.04rem; line-height:1.55; }
+.model__row .mtag{ display:inline-block; margin-top:14px; font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:rgba(243,236,221,.55); border:1px solid rgba(243,236,221,.25); padding:5px 10px; border-radius:999px; }
+@media (max-width:760px){ .model__row{ grid-template-columns:1fr; gap:14px; } .model__num{ padding-top:0; } }
+
+/* how we invest & create value — timeline */
+.hwiv{ background:#0F0A06; }
+.hwiv h2 em{ color:var(--accent); }
+.timeline{ margin-top:clamp(44px,5vw,74px); }
+.stage{ display:grid; grid-template-columns:40px 1fr; gap:clamp(18px,3vw,40px); padding-bottom:clamp(40px,6vw,76px); }
+.stage:last-child{ padding-bottom:0; }
+.stage__rail{ position:relative; }
+.stage__node{ width:22px; height:22px; border-radius:50%; border:2px solid var(--accent); background:#0F0A06; position:relative; z-index:2; margin-left:9px; }
+.stage__node::after{ content:''; position:absolute; inset:4px; border-radius:50%; background:var(--accent); transform:scale(0); transition:transform .5s .25s cubic-bezier(.2,.7,.2,1); }
+.stage.in .stage__node::after{ transform:scale(1); }
+.stage__rail::before{ content:''; position:absolute; left:19px; top:24px; bottom:-76px; width:2px; background:var(--accent); opacity:.4; transform:scaleY(0); transform-origin:top; transition:transform .9s ease; }
+.stage.in .stage__rail::before{ transform:scaleY(1); }
+.stage:last-child .stage__rail::before{ display:none; }
+.stage__tag{ font-family:var(--font-mono); font-size:11.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+.stage__title{ font-family:var(--font-display); font-weight:700; font-size:clamp(1.7rem,3.2vw,2.5rem); letter-spacing:-0.025em; line-height:1.02; margin:10px 0 0; color:var(--paper); }
+.stage__lead{ margin:16px 0 0; max-width:58ch; color:rgba(243,236,221,.78); font-size:1.06rem; line-height:1.55; }
+
+.principles{ list-style:none; margin:26px 0 0; padding:0; border-top:1px solid rgba(243,236,221,.16); }
+.principles li{ display:grid; grid-template-columns:52px 1fr; gap:16px; padding:18px 0; border-bottom:1px solid rgba(243,236,221,.16); align-items:baseline; }
+.principles .pn{ font-family:var(--font-mono); font-weight:700; font-size:13px; letter-spacing:.08em; color:var(--accent); }
+.principles h4{ font-family:var(--font-display); font-weight:600; font-size:1.3rem; letter-spacing:-0.02em; margin:0; color:var(--paper); }
+.principles p{ margin:6px 0 0; color:rgba(243,236,221,.62); font-size:.97rem; line-height:1.5; }
+@media (max-width:560px){ .principles li{ grid-template-columns:1fr; gap:5px; } }
+
+.ws-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(22px,2.4vw,38px) clamp(26px,3vw,44px); margin-top:26px; }
+.ws-item{ padding-top:20px; border-top:1.5px solid rgba(243,236,221,.3); }
+.ws-item .n{ font-family:var(--font-mono); font-weight:700; font-size:12px; letter-spacing:.1em; color:var(--accent); }
+.ws-item h4{ font-family:var(--font-display); font-weight:600; font-size:1.25rem; letter-spacing:-0.02em; margin:12px 0 8px; color:var(--paper); line-height:1.05; }
+.ws-item p{ margin:0; color:rgba(243,236,221,.66); font-size:.95rem; line-height:1.5; }
+@media (max-width:820px){ .ws-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:520px){ .ws-grid{ grid-template-columns:1fr; } }
+
+.lp-quote{ margin:clamp(28px,3.5vw,44px) 0 0; padding:clamp(28px,3.2vw,44px) clamp(26px,3vw,40px) clamp(26px,3vw,38px); border:1px solid rgba(243,236,221,.18); border-radius:18px; background:rgba(243,236,221,.045); position:relative; overflow:hidden; }
+.lp-quote::before{ content:'\201C'; position:absolute; top:-22px; left:16px; font-family:var(--font-serif); font-size:130px; line-height:1; color:var(--accent); opacity:.35; }
+.lp-quote p{ font-family:var(--font-serif); font-style:italic; font-size:clamp(1.25rem,2.2vw,1.8rem); line-height:1.4; color:var(--paper); margin:0; position:relative; z-index:1; }
+.outcome-closing{ font-family:var(--font-display); font-weight:600; font-size:clamp(1.5rem,2.8vw,2.2rem); letter-spacing:-0.025em; line-height:1.15; color:var(--paper); margin:clamp(28px,3.5vw,44px) 0 0; max-width:26ch; text-wrap:balance; }
+.outcome-closing em{ font-family:var(--font-serif); font-style:italic; font-weight:400; color:var(--accent); }
+
+.metrics3{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(28px,4vw,56px); margin-top:clamp(40px,5vw,64px); }
+.metrics3 .big{ font-family:var(--font-display); font-weight:700; font-size:clamp(3rem,7vw,5.4rem); letter-spacing:-0.04em; line-height:.9; color:var(--accent); }
+.metrics3 .lbl{ margin-top:14px; color:var(--ink-2); max-width:30ch; }
+@media (max-width:760px){ .metrics3{ grid-template-columns:1fr; gap:34px; } }
+
+/* team */
+.partners{ margin-top:clamp(40px,5vw,60px); border-top:1px solid var(--line); }
+.partner{ display:grid; grid-template-columns:clamp(132px,16vw,190px) 1fr; gap:clamp(24px,4vw,60px); align-items:start; padding:clamp(30px,3.6vw,48px) 0; border-bottom:1px solid var(--line); }
+.partner__photo{ width:100%; aspect-ratio:1; border-radius:50%; overflow:hidden; background:var(--paper-2); }
+.partner__photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+.partner__head h3{ font-family:var(--font-display); font-weight:700; font-size:clamp(1.5rem,2.6vw,2.1rem); letter-spacing:-0.025em; margin:0; line-height:1; }
+.partner__head .role{ font-family:var(--font-mono); font-size:12px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin-top:10px; display:block; }
+.partner__bio{ margin-top:18px; max-width:62ch; }
+.partner__bio p{ margin:0 0 14px; color:var(--ink-2); font-size:1.02rem; line-height:1.6; }
+.partner__bio p:last-child{ margin-bottom:0; }
+.partner__bio strong{ color:var(--ink); font-weight:600; }
+.partner__bio em{ font-family:var(--font-serif); font-style:italic; }
+@media (max-width:680px){ .partner{ grid-template-columns:1fr; gap:18px; } .partner__photo{ width:clamp(120px,40vw,176px); } }
+.team-extra{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,56px); margin-top:clamp(30px,4vw,46px); }
+.team-extra h4{ font-family:var(--font-mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 10px; }
+.team-extra p{ margin:0; font-size:1.05rem; color:var(--ink-2); line-height:1.5; }
+.team-extra strong{ color:var(--ink); font-weight:600; }
+@media (max-width:560px){ .team-extra{ grid-template-columns:1fr; gap:22px; } }
+
+.news{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,5vw,64px); align-items:center; }
+.news form{ display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+.news input[type=email]{ flex:1 1 240px; background:transparent; border:0; border-bottom:1.5px solid var(--on-accent); color:var(--on-accent); font-family:var(--font-body); font-size:1.1rem; padding:12px 4px; outline:none; }
+.news input[type=email]::placeholder{ color:var(--on-accent); opacity:.6; }
+.news .btn{ background:var(--ink); border-color:var(--ink); color:var(--paper); }
+.news .btn:hover{ background:var(--paper); color:var(--ink); border-color:var(--paper); }
+.news [data-done]{ font-family:var(--font-mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase; margin-top:14px; min-height:1em; }
+@media (max-width:760px){ .news{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html" aria-label="Dunia Ventures home"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="14.5" cy="25.5" r="12.5" fill="#2E2150"/><circle cx="25.5" cy="25.5" r="12.5" fill="#191024"/><circle cx="20" cy="14.5" r="12.5" fill="#6C45B8" fill-opacity="0.92"/></svg>Dunia</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nl" href="index.html">Home</a>
+      <a class="nl" href="Portfolio.html">Themes</a>
+      <a class="nl" href="Approach.html">Approach</a>
+      <a class="nl" href="Team.html">Team</a>
+      <a class="nl" href="About.html" aria-current="page">About</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn" href="mailto:info@wajenzi.fund">Pitch us</a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="ab-hero wrap" data-screen-label="About / Hero">
+  <span class="eyebrow reveal">About Dunia <span class="idx">(01)</span></span>
+  <h1 class="display d-hero reveal d1" style="font-size:clamp(2.6rem,6.4vw,6rem);">We exist to <em>capitalise</em> African creativity.</h1>
+  <p class="lead reveal d2">Dunia is a sector-specialist fund. We don't just write cheques — we build the financing, infrastructure and access that turn African creative talent into companies the world can't ignore.</p>
+</section>
+
+<!-- STORY -->
+<section class="section--tight wrap" data-screen-label="About / Story">
+  <hr class="rule" style="margin-bottom:clamp(40px,5vw,64px);" />
+  <div class="story">
+    <div class="reveal">
+      <span class="eyebrow">The thesis <span class="idx">(02)</span></span>
+      <p class="pull" style="margin-top:18px;">Africa has the world's youngest population and a culture the planet already consumes — yet almost none of the capital.</p>
+    </div>
+    <div class="reveal d1">
+      <p>Afrobeats tops global charts. Nollywood is the world's second-largest film industry by volume. African fashion, design and gaming are shaping culture far beyond the continent. The talent and the demand are not in question.</p>
+      <p>What's missing is capital that understands creative businesses, and infrastructure to make their value ownable, exportable and durable. Traditional equity alone doesn't fit catalogues, rights and royalties. Generalist funds don't have the networks. That gap is our entire reason to exist.</p>
+      <p>We invest sector by sector, with specialists who have built and scaled in each, so founders get money <em class="serif-accent">and</em> the operating muscle to win globally.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITY METRICS -->
+<section class="section wrap" data-screen-label="About / Opportunity">
+  <div class="reveal" style="max-width:40ch;">
+    <span class="eyebrow">The opportunity <span class="idx">(03)</span></span>
+    <h2 class="display d-1" style="margin-top:.3em;">The numbers point one way.</h2>
+  </div>
+  <div class="metrics3">
+    <div class="reveal"><div class="big">€20–25B</div><div class="lbl">Africa's creative &amp; cultural economy — and equity reaches almost none of it.</div></div>
+    <div class="reveal d1"><div class="big">5</div><div class="lbl">Verticals, from film and music to creative-tech infrastructure.</div></div>
+    <div class="reveal d2"><div class="big">7</div><div class="lbl">Priority markets across the continent, Francophone-weighted.</div></div>
+  </div>
+  <p class="mono-tag reveal" style="margin-top:34px; color:var(--ink-soft);">Sources · Afreximbank CCI Report · CANEX value-chain analysis</p>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section bg-accent" id="dispatch" data-screen-label="About / Dispatch">
+  <div class="wrap news">
+    <div class="reveal">
+      <span class="eyebrow">The Dunia Dispatch <span class="idx">(04)</span></span>
+      <h2 class="display d-1" style="margin-top:.25em;">Field notes on Africa's creative economy.</h2>
+    </div>
+    <div class="reveal d1">
+      <p class="lead">Monthly intelligence on the founders, deals and shifts shaping creative-tech across the continent.</p>
+      <form data-newsletter>
+        <input type="email" placeholder="you@studio.com" aria-label="Email address" required />
+        <button class="btn" type="submit">Subscribe</button>
+        <div data-done aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <svg class="brand-mark" style="width:40px;height:40px;margin-bottom:16px;" viewBox="0 0 40 40" aria-hidden="true"><circle cx="14.5" cy="25.5" r="12.5" fill="#4B3578"/><circle cx="25.5" cy="25.5" r="12.5" fill="#2E2150"/><circle cx="20" cy="14.5" r="12.5" fill="#8A63D6" fill-opacity="0.95"/></svg>
+        <span class="eyebrow">Dunia Ventures</span>
+        <p class="footer__big">Let's build<br />what's next.</p>
+        <p class="mono-tag" style="color:rgba(243,236,221,.5); margin:14px 0 0; letter-spacing:.08em;">Investing in imagination · Scaling creativity</p>
+        <a class="btn" href="mailto:info@wajenzi.fund" style="margin-top:24px; background:var(--paper); color:var(--ink); border-color:var(--paper);">info@wajenzi.fund</a>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="Portfolio.html">Investment themes</a>
+        <a href="Approach.html">Our approach</a>
+        <a href="Team.html">Team</a>
+        <a href="About.html">About</a>
+      </div>
+      <div class="footer__col">
+        <h4>Connect</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">X / Twitter</a>
+        <a href="mailto:info@wajenzi.fund">Pitch us</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Dunia Ventures</span>
+      <span>Côte d'Ivoire · Algeria · Luxembourg</span>
+    </div>
+  </div>
+</footer>
+
+<script src="dunia.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="dunia-tweaks.jsx"></script>
+</body>
+</html>
