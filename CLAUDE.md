@@ -33,12 +33,14 @@ Nav across all pages: **Home · Themes · Approach · Team · About**.
 - **Type:** display `Bricolage Grotesque`; accent italics `Instrument Serif`; body `Hanken Grotesk`;
   labels/numbers `Space Mono`. Loaded via Google Fonts `@import` at the top of `dunia.css`.
 - **Color:** warm cream paper + warm near-black ink, with ONE swappable accent.
-  Default accent is **plum `#6C3FB6`** (matches the logo). Alternates (vermillion / marigold / jade)
+  Default accent is **plum `#6C3FB6`**. Alternates (vermillion / marigold / jade)
   live in `window.DUNIA_PALETTES` (`dunia.js`) and the Tweaks panel.
 - **Accent is themeable at runtime** via `--accent` / `--on-accent` / `--accent-deep` on `:root`,
   set by `duniaApplyTheme()` and persisted to `localStorage` (`dunia.theme`). A tiny inline script in
   each page's `<head>` re-applies the saved theme before paint to avoid a flash.
-- **Logo:** the three-circle mark is inline SVG (purple), in every nav and footer — no image file.
+- **Logo:** a heavy D holding a plum disc ("dunia" = the world). Files in `assets/logo/`: `dunia-lockup.svg` in the nav (42px tall, 36px on phones),
+  `dunia-mark-reversed.svg` in the footer, `dunia-mark.svg` as favicon, plus ink-only and reversed lockups and an app icon.
+  Type in the files is outlined. Disc colour `#7A4FC6`; never recolour it with the theme accent.
 
 ## Conventions (please keep)
 - **Canonical HTML:** close every element, double-quote attributes, no self-closing non-void tags.

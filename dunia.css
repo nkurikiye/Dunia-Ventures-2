@@ -148,6 +148,8 @@ body.no-grain .grain{ display:none; }
 .nav__inner{ display:flex; align-items:center; justify-content:space-between; height:74px; }
 .brand{ display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:800; font-size:23px; letter-spacing:-0.04em; }
 .brand-mark{ width:28px; height:28px; flex:none; display:block; }
+.brand-logo{ height:42px; width:auto; display:block; }
+@media (max-width:520px){ .brand-logo{ height:36px; } }
 .brand .dot{ width:9px; height:9px; border-radius:50%; background:var(--accent); display:inline-block; transform:translateY(-1px); }
 .brand small{ font-family:var(--font-mono); font-size:10px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); }
 .nav__links{ display:flex; align-items:center; gap:34px; }
